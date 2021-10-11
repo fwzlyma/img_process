@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>552</width>
+    <height>539</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ImgProcessSystem</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/sys.png</normaloff>img/sys.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="0">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>灰度图</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>批量裁剪</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="text">
+       <string>膨胀</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="text">
+       <string>resize</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="text">
+       <string>保存地址</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2" colspan="4">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="text">
+       <string>123</string>
+      </property>
+      <property name="placeholderText">
+       <string>批量裁剪路径地址</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="text">
+       <string>边缘检测</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1" colspan="2">
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="text">
+       <string>裁剪</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4" colspan="2">
+     <widget class="QLabel" name="label_2">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>300</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="text">
+       <string>选择图片</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="text">
+       <string>腐蚀</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2" colspan="4">
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="placeholderText">
+       <string>批量裁剪图片保存地址</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1" colspan="2">
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="text">
+       <string>高斯模糊</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="3">
+     <widget class="QLabel" name="label">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>300</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="pixmap">
+       <pixmap>img/sys.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="indent">
+       <number>-1</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>552</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>select()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>128</x>
+     <y>289</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>gray()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>23</x>
+     <y>324</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>320</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>blur()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>314</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>canny()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>315</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>324</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>dilate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>432</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>446</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>erode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>537</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>537</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>resize()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>22</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>357</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_10</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>crop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>163</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>161</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>selectCropPath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>390</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>selectSavePath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>24</x>
+     <y>424</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>423</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>select()</slot>
+  <slot>gray()</slot>
+  <slot>blur()</slot>
+  <slot>canny()</slot>
+  <slot>dilate()</slot>
+  <slot>erode()</slot>
+  <slot>resize()</slot>
+  <slot>crop()</slot>
+  <slot>selectCropPath()</slot>
+  <slot>selectSavePath()</slot>
+ </slots>
+</ui>
